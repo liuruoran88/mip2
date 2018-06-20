@@ -50,7 +50,12 @@ export default class GlobalComponent {
       this.loadedScripts.push(name)
     }
 
-    document.body.innerHTML += html
+    let wrapper = document.createElement('div')
+    wrapper.id = `mip-global-component-${name}`
+    wrapper.setAttribute('mip-global-component', '')
+    wrapper.innerHTML = html
+    document.body.appendChild(wrapper)
+
     this.registeredGlobalComponent.push(name)
   }
 }

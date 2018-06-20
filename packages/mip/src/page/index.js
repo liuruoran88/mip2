@@ -163,7 +163,7 @@ class Page {
         } else if (type === MESSAGE_REGISTER_GLOBAL_COMPONENT) {
           // Register global component
           console.log('register global component')
-          // this.globalComponent.register(data)
+          this.globalComponent.register(data)
         }
       })
 
