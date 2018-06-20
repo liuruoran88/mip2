@@ -38,7 +38,6 @@ export default class GlobalComponent {
   }
 
   async register ({name, html, src}) {
-    console.log('register', name)
     // Each global component can be registered only once
     if (this.registeredGlobalComponent.indexOf(name) !== -1) {
       return
