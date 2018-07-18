@@ -116,16 +116,6 @@ class MipShell extends CustomElement {
       this.processShellConfig(tmpShellConfig)
 
       window.MIP_SHELL_CONFIG = tmpShellConfig.routes
-<<<<<<< HEAD
-      page.notifyRootPage({
-        type: 'set-mip-shell-config',
-        data: {
-          shellConfig: tmpShellConfig.routes
-        }
-      })
-
-=======
->>>>>>> 01af3188f77ce90a9248760c2354d42aaa6015a4
       // Append other DOM
       let children = this.element.children
       let otherDOM = [].slice.call(children).slice(1, children.length)
@@ -449,8 +439,6 @@ class MipShell extends CustomElement {
     this.bindHeaderEvents()
 
     window.MIP.viewer.eventAction.execute('active', this.element, {})
-<<<<<<< HEAD
-=======
   }
 
   /**
@@ -676,7 +664,6 @@ class MipShell extends CustomElement {
     })
     // 3.notify SF to set the iframe outside
     viewer.sendMessage('resizeContainer', {height: this.currentViewportHeight})
->>>>>>> 01af3188f77ce90a9248760c2354d42aaa6015a4
   }
 
   bindHeaderEvents () {
