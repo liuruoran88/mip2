@@ -392,6 +392,9 @@ class MipShell extends CustomElement {
   }
 
   bindRootEvents () {
+    this.currentViewportHeight = viewport.getHeight()
+    this.currentViewportWidth = viewport.getWidth()
+
     // Receive and resend message
     this.messageHandlers.push((type, data) => {
       if (type === MESSAGE_BROADCAST_EVENT) {
@@ -952,6 +955,7 @@ class MipShell extends CustomElement {
       }
     }
 
+    console.warn('Cannot find MIP Shell Config for current page. Use default instead.')
     return Object.assign({}, DEFAULT_SHELL_CONFIG)
   }
 
